@@ -1,4 +1,4 @@
-# AWS Lambda Java API Example
+# AWS Lambda Java API 
 
 This example code is used for running a Java Lambda using API Gateway trigger. 
 
