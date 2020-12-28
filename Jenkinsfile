@@ -97,7 +97,7 @@ pipeline {
 					sh "aws s3 cp target/lambda-java-api-example-1.0-SNAPSHOT.jar s3://deepatestb"
 					sh '''aws lambda update-function-code --function-name deepapi \\
 					--s3-bucket deepatestb \\
-					--s3-key demo-1.0.0.jar \\
+					--s3-key lambda-java-api-example-1.0-SNAPSHOT.jar \\
 					--region ap-south-1'''
 
             }
