@@ -8,7 +8,7 @@ pipeline {
             steps {
 		    echo "${BRANCH_NAME}"
                 // Get some code from a GitHub repository
-                sh 'rm -rf Milan'                
+                sh 'rm -rf aws-lambda-function-java'                
                 sh 'git clone https://github.com/DPMadhavan/aws-lambda-function-java.git'
             }
         }
@@ -88,9 +88,9 @@ pipeline {
         } */
 		
 		stage('AWS Development') {
-			when {
+			/*when {
 				expression { BRANCH_NAME =='master' | BRANCH_NAME =='dev'}
-			}
+			}*/
             	steps {
                 	sh "mvn package"
 			
