@@ -94,9 +94,9 @@ pipeline {
             	steps {
                 	sh "mvn package"
 			
-					sh "aws s3 cp target/lambda-java-api-example-1.0-SNAPSHOT.jar s3://documbucket"
-					sh '''aws lambda update-function-code --function-name lambda-api-java-example \\
-					--s3-bucket documbucket \\
+					sh "aws s3 cp target/lambda-java-api-example-1.0-SNAPSHOT.jar s3://deepatestb"
+					sh '''aws lambda update-function-code --function-name deepapi \\
+					--s3-bucket deepatestb \\
 					--s3-key demo-1.0.0.jar \\
 					--region ap-south-1'''
 
